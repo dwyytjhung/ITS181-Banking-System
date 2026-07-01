@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="30.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.CurrencyExchangeController">
+   <children>
+      <Label styleClass="heading-1" text="Currency Exchange Calculator" />
+      <VBox maxWidth="500.0" spacing="20.0" styleClass="card">
+         <children>
+            <VBox spacing="5.0">
+               <children>
+                  <Label styleClass="text-secondary" text="Amount" />
+                  <TextField fx:id="amountField" promptText="0.00" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label styleClass="text-secondary" text="From Currency" />
+                  <ComboBox fx:id="fromCurrencyCombo" maxWidth="1.7976931348623157E308" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label styleClass="text-secondary" text="To Currency" />
+                  <ComboBox fx:id="toCurrencyCombo" maxWidth="1.7976931348623157E308" />
+               </children>
+            </VBox>
+            <Label fx:id="resultLabel" managed="false" styleClass="heading-2" textFill="#4f5d75" visible="false" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleConvert" styleClass="button-primary" text="Convert">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox spacing="30.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.ManageAccountsController">
+   <children>
+      <VBox spacing="20.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Label styleClass="heading-1" text="Manage Accounts" />
+            <VBox styleClass="card" VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="accountsTable" prefHeight="400.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="accNumCol" prefWidth="150.0" text="Account Number" />
+                      <TableColumn fx:id="custIdCol" prefWidth="150.0" text="Customer ID" />
+                      <TableColumn fx:id="balanceCol" prefWidth="150.0" text="Balance" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox prefWidth="350.0" spacing="20.0">
+         <children>
+            <VBox spacing="15.0" styleClass="card">
+               <children>
+                  <Label styleClass="heading-3" text="Create New Customer Account" />
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="text-secondary" text="Username / Customer ID" />
+                        <TextField fx:id="newUserIdField" promptText="e.g., john_doe" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="text-secondary" text="Password" />
+                        <TextField fx:id="newUserPassField" promptText="********" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="text-secondary" text="Full Name" />
+                        <TextField fx:id="newUserNameField" promptText="e.g., John Doe" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="text-secondary" text="Initial Deposit ($)" />
+                        <TextField fx:id="initialDepositField" promptText="0.00" />
+                     </children>
+                  </VBox>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCreateAccount" styleClass="button-primary" text="Create Account" />
+                  <Label fx:id="createStatusLabel" managed="false" visible="false" />
+               </children>
+            </VBox>
+            <VBox spacing="15.0" styleClass="card">
+               <children>
+                  <Label styleClass="heading-3" text="Modify / Delete Selected" />
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="text-secondary" text="Update Balance ($)" />
+                        <TextField fx:id="updateBalanceField" promptText="0.00" />
+                     </children>
+                  </VBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleModifyAccount" styleClass="button-primary" text="Update" HBox.hgrow="ALWAYS" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDeleteAccount" style="-fx-background-color: #EF4444;" styleClass="button-primary" text="Delete" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="actionStatusLabel" managed="false" visible="false" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

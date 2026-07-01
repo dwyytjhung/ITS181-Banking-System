@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="20.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.CustomerInboxController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="20.0">
+         <children>
+            <Label styleClass="heading-1" text="Inbox" />
+            <Label fx:id="unreadBadge" managed="false" styleClass="badge-pending" visible="false" />
+         </children>
+      </HBox>
+      <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+         <children>
+            <!-- Message List -->
+            <VBox prefWidth="420.0" spacing="0" styleClass="card" HBox.hgrow="NEVER">
+               <children>
+                  <Label style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #64748B; -fx-padding: 0 0 10 0;" text="MESSAGES" />
+                  <TableView fx:id="inboxTable" prefHeight="450.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="dateCol" prefWidth="145.0" text="Date" />
+                      <TableColumn fx:id="titleCol" prefWidth="175.0" text="Subject" />
+                      <TableColumn fx:id="readCol" prefWidth="60.0" text="Status" />
+                    </columns>
+                    <placeholder>
+                        <Label text="No messages yet." styleClass="text-secondary" />
+                    </placeholder>
+                  </TableView>
+               </children>
+            </VBox>
+            <!-- Message Content -->
+            <VBox fx:id="messagePanel" managed="false" spacing="15.0" styleClass="card" visible="false" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="messageTitleLabel" styleClass="heading-3" text="" wrapText="true" />
+                  <Label fx:id="messageDateLabel" styleClass="text-secondary" text="" />
+                  <TextArea fx:id="messageBodyArea" editable="false" prefHeight="350.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14px; -fx-background-color: #F8FAFC; -fx-border-color: transparent;" wrapText="true" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <!-- Empty state when nothing selected -->
+            <VBox alignment="CENTER" managed="true" spacing="10.0" styleClass="card" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 48px;" text="&#128234;" />
+                  <Label styleClass="heading-3" text="Select a message to read" />
+                  <Label styleClass="text-secondary" text="Click any message on the left to open it." />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10" left="10" right="10" top="10" />
+   </padding>
+</VBox>

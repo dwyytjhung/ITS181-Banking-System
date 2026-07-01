@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="229.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.CreateAccountController">
+   <children>
+      <Label layoutX="64.0" layoutY="67.0" text="Account Number" />
+      <TextField fx:id="acc_num" layoutX="178.0" layoutY="63.0" prefHeight="26.0" prefWidth="60.0" />
+      <Label layoutX="64.0" layoutY="118.0" text="Enter owner name" />
+      <TextField fx:id="tf_name" layoutX="179.0" layoutY="114.0" />
+      <Button fx:id="createSubmit" layoutX="168.0" layoutY="164.0" mnemonicParsing="false" onAction="#OnCreateSubmit" text="Submit" />
+   </children>
+</AnchorPane>

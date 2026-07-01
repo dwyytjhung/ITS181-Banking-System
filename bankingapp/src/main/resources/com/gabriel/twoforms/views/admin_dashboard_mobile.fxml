@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" styleClass="mobile-scroll-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.AdminDashboardController">
+   <content>
+      <VBox spacing="20.0" style="-fx-background-color: transparent;">
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Label styleClass="heading-2" text="Admin Dashboard" style="-fx-font-size: 20px;" />
+            
+            <!-- Stats Grid 2x2 -->
+            <GridPane hgap="12.0" vgap="12.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" percentWidth="50.0" />
+                  <ColumnConstraints hgrow="ALWAYS" percentWidth="50.0" />
+               </columnConstraints>
+               <!-- Row 0 -->
+               <VBox alignment="CENTER" spacing="6.0" styleClass="mobile-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <children>
+                     <Label text="👥" style="-fx-font-size: 24px;" />
+                     <Label fx:id="totalCustomersLabel" text="0" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #4F5D75;" />
+                     <Label text="Customers" style="-fx-font-size: 11px; -fx-text-fill: #64748B;" />
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" spacing="6.0" styleClass="mobile-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <children>
+                     <Label text="💰" style="-fx-font-size: 24px;" />
+                     <Label fx:id="totalDepositsLabel" text="$0.00" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #22C55E;" />
+                     <Label text="Total Deposits" style="-fx-font-size: 11px; -fx-text-fill: #64748B;" />
+                  </children>
+               </VBox>
+               <!-- Row 1 -->
+               <VBox alignment="CENTER" spacing="6.0" styleClass="mobile-card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <children>
+                     <Label text="📊" style="-fx-font-size: 24px;" />
+                     <Label fx:id="totalTransactionsLabel" text="0" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #4F5D75;" />
+                     <Label text="Transactions" style="-fx-font-size: 11px; -fx-text-fill: #64748B;" />
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" spacing="6.0" styleClass="mobile-card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <children>
+                     <Label text="⏳" style="-fx-font-size: 24px;" />
+                     <Label fx:id="pendingRequestsLabel" text="0" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #F58220;" />
+                     <Label text="Pending" style="-fx-font-size: 11px; -fx-text-fill: #64748B;" />
+                  </children>
+               </VBox>
+            </GridPane>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

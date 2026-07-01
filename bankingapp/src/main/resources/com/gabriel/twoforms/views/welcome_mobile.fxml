@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="rootPane" alignment="CENTER" spacing="30.0" style="-fx-background-color: #F8FAFC;" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.WelcomeController">
+   <children>
+      <VBox alignment="CENTER" spacing="10.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="logo-text" text="PROSPERA" style="-fx-font-size: 28px;" />
+            <Label styleClass="tagline" text="&quot;Grow Smarter. Bank Better.&quot;" style="-fx-font-size: 13px;" />
+         </children>
+      </VBox>
+      
+      <VBox alignment="CENTER" maxWidth="350.0" spacing="20.0" styleClass="card">
+         <children>
+            <Label styleClass="heading-2" text="Welcome" style="-fx-font-size: 20px;" />
+
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCustomerLogin" styleClass="button-primary" text="Log In">
+               <padding>
+                  <Insets bottom="12.0" top="12.0" />
+               </padding>
+            </Button>
+            
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label styleClass="text-secondary" text="View Mode:" style="-fx-font-size: 12px;" />
+                  <HBox styleClass="toggle-switch-container">
+                     <children>
+                        <RadioButton fx:id="desktopRadio" mnemonicParsing="false" styleClass="toggle-switch-button" text="Desktop" />
+                        <RadioButton fx:id="mobileRadio" mnemonicParsing="false" styleClass="toggle-switch-button" text="Mobile" />
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="25.0" right="25.0" top="30.0" />
+         </padding>
+      </VBox>
+      
+      <HBox alignment="CENTER">
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleAdminLogin" styleClass="button-text" text="Administrator Access" style="-fx-font-size: 13px;" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

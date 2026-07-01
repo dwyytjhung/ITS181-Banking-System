@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="rootPane" prefWidth="420.0" prefHeight="850.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.MainDashboardController">
+    <!-- Top Navigation -->
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" spacing="10.0" styleClass="mobile-top-bar">
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../images/logo.png" />
+                </image>
+            </ImageView>
+            <Label styleClass="logo-text" text="PROSPERA" style="-fx-font-size: 18px;" />
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS" spacing="10.0">
+                <Label fx:id="userNameLabel" style="-fx-text-fill: #64748B; -fx-font-size: 11px;" text="User" />
+                <Button mnemonicParsing="false" onAction="#handleLogout" styleClass="button-text" text="Exit" style="-fx-font-size: 11px; -fx-padding: 0;" />
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- Dynamic Content Area -->
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #F8FAFC;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+        </StackPane>
+    </center>
+
+    <!-- Bottom Navigation -->
+    <bottom>
+        <VBox>
+            <!-- Customer Bottom Navigation -->
+            <HBox fx:id="customerNavBar" alignment="CENTER" prefHeight="65.0" spacing="15.0" styleClass="mobile-nav-bar">
+                <children>
+                    <Button fx:id="navDashboard" mnemonicParsing="false" onAction="#handleMobileNavDashboard" styleClass="mobile-nav-button" text="Dashboard" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308">
+                        <graphic>
+                            <Label text="🏠" style="-fx-font-size: 20px;" />
+                        </graphic>
+                    </Button>
+                    <Button fx:id="navTransfers" mnemonicParsing="false" onAction="#handleMobileNavTransfers" styleClass="mobile-nav-button" text="Transfers" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308">
+                        <graphic>
+                            <Label text="💸" style="-fx-font-size: 20px;" />
+                        </graphic>
+                    </Button>
+                    <Button fx:id="navTransactions" mnemonicParsing="false" onAction="#handleMobileNavTransactions" styleClass="mobile-nav-button" text="History" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308">
+                        <graphic>
+                            <Label text="📜" style="-fx-font-size: 20px;" />
+                        </graphic>
+                    </Button>
+                    <Button fx:id="navCards" mnemonicParsing="false" onAction="#handleMobileNavCards" styleClass="mobile-nav-button" text="Cards" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308">
+                        <graphic>
+                            <Label text="💳" style="-fx-font-size: 20px;" />
+                        </graphic>
+                    </Button>
+                    <Button fx:id="navProfile" mnemonicParsing="false" onAction="#handleMobileNavProfile" styleClass="mobile-nav-button" text="Profile" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308">
+                        <graphic>
+                            <Label text="👤" style="-fx-font-size: 20px;" />
+                        </graphic>
+                    </Button>
+                </children>
+            </HBox>
+            
+            <!-- Admin Bottom Navigation -->
+            <HBox fx:id="adminNavBar" alignment="CENTER" prefHeight="65.0" spacing="20.0" styleClass="mobile-nav-bar">
+                <children>
+                    <Button fx:id="adminNavDashboard" mnemonicParsing="false" onAction="#handleAdminMobileNavDashboard" styleClass="mobile-nav-button" text="Dashboard" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308">
+                        <graphic>
+                            <Label text="🏠" style="-fx-font-size: 20px;" />
+                        </graphic>
+                    </Button>
+                    <Button fx:id="adminNavAccounts" mnemonicParsing="false" onAction="#handleAdminMobileNavAccounts" styleClass="mobile-nav-button" text="Accounts" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308">
+                        <graphic>
+                            <Label text="👥" style="-fx-font-size: 20px;" />
+                        </graphic>
+                    </Button>
+                    <Button fx:id="adminNavCards" mnemonicParsing="false" onAction="#handleAdminMobileNavCards" styleClass="mobile-nav-button" text="Requests" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308">
+                        <graphic>
+                            <Label text="💳" style="-fx-font-size: 20px;" />
+                        </graphic>
+                    </Button>
+                    <Button fx:id="adminNavProfile" mnemonicParsing="false" onAction="#handleAdminMobileNavProfile" styleClass="mobile-nav-button" text="Profile" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308">
+                        <graphic>
+                            <Label text="👤" style="-fx-font-size: 20px;" />
+                        </graphic>
+                    </Button>
+                </children>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

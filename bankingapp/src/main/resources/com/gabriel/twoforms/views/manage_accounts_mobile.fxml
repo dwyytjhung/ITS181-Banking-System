@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox style="-fx-background-color: #F8FAFC;" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.ManageAccountsController">
+   <children>
+      <!-- List Panel -->
+      <VBox fx:id="listPanel" VBox.vgrow="ALWAYS">
+         <children>
+            <ScrollPane fitToWidth="true" styleClass="mobile-scroll-container" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox spacing="20.0" style="-fx-background-color: transparent;">
+                     <padding>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label styleClass="heading-2" text="Manage Accounts" style="-fx-font-size: 20px;" />
+                        <HBox spacing="10.0" alignment="CENTER_LEFT">
+                           <children>
+                              <TextField fx:id="searchField" promptText="Search accounts..." style="-fx-font-size: 13px; -fx-padding: 8 12;" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                           </children>
+                        </HBox>
+                        <VBox fx:id="accountsContainer" spacing="10.0">
+                           <!-- Dynamically Populated -->
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      
+      <!-- Detail Panel (toggled on selection) -->
+      <VBox fx:id="detailPanel" managed="false" visible="false" VBox.vgrow="ALWAYS">
+         <children>
+            <ScrollPane fitToWidth="true" styleClass="mobile-scroll-container" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox spacing="15.0" style="-fx-background-color: transparent;">
+                     <padding>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button fx:id="backToListBtn" mnemonicParsing="false" styleClass="button-text" text="&lt; Back to Accounts"
+                                style="-fx-font-size: 13px; -fx-text-fill: #F58220;" />
+                        <Label fx:id="detailNameLabel" styleClass="heading-3" text="" style="-fx-font-size: 18px;" />
+                        <VBox spacing="12.0" styleClass="mobile-card">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Account #:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailAccountNumLabel" style="-fx-font-weight: bold;" text="" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Type:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailTypeLabel" style="-fx-font-weight: bold;" text="" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Balance:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailBalanceLabel" style="-fx-font-weight: bold; -fx-text-fill: #22C55E;" text="" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Status:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailStatusLabel" style="-fx-font-weight: bold;" text="" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="toggleStatusBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleToggleStatus" styleClass="button-secondary" text="Toggle Status">
+                           <padding><Insets bottom="12.0" top="12.0" /></padding>
+                        </Button>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

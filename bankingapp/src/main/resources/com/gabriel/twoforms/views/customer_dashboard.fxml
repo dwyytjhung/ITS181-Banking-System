@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="30.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.CustomerDashboardController">
+   <children>
+      <Label styleClass="heading-1" text="Dashboard Overview" />
+      <HBox spacing="30.0">
+         <children>
+            <!-- Balance Card -->
+            <VBox prefWidth="300.0" spacing="10.0" styleClass="card">
+               <children>
+                  <Label styleClass="text-secondary" text="Total Balance" />
+                  <Label fx:id="totalBalanceLabel" styleClass="heading-1" text="\$0.00" textFill="#1e293b" />
+                  <Label fx:id="accountsCountLabel" styleClass="badge-success" text="0 Active Account(s)" />
+               </children>
+            </VBox>
+            
+            <!-- Savings Goal Card -->
+            <VBox prefWidth="300.0" spacing="10.0" styleClass="card">
+               <children>
+                  <Label styleClass="text-secondary" text="Savings Goal: New Car" />
+                  <Label styleClass="heading-2" text="65%" textFill="#f58220" />
+                  <ProgressBar fx:id="savingsProgressBar" maxWidth="1.7976931348623157E308" progress="0.65" />
+                  <Label styleClass="text-secondary" text="\$13,000 / $20,000" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="rootPane" alignment="CENTER" spacing="20.0" style="-fx-background-color: #F8FAFC;" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.SplashController">
+   <children>
+      <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label styleClass="logo-text" text="PROSPERA" />
+      <Label styleClass="tagline" text="&quot;Grow Smarter. Bank Better.&quot;" />
+      <ProgressIndicator prefHeight="40.0" prefWidth="40.0" style="-fx-progress-color: #F58220;">
+         <VBox.margin>
+            <javafx.geometry.Insets top="30.0" />
+         </VBox.margin>
+      </ProgressIndicator>
+   </children>
+</VBox>
