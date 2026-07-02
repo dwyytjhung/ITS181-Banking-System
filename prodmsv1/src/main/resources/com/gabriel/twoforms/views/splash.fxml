@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" styleClass="splash-root" stylesheets="@../css/styles.css"
+           xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.gabriel.twoforms.controllers.SplashController">
+   <children>
+      <VBox alignment="CENTER" spacing="0">
+         <children>
+
+            <!-- Logo Ring and Branding -->
+            <VBox alignment="CENTER" styleClass="splash-logo-ring" maxWidth="-Infinity">
+               <children>
+                  <ImageView fx:id="logoImage" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+
+                  <!-- Wordmark -->
+                  <Label fx:id="wordmarkLabel" styleClass="splash-wordmark" text="PROSPERA">
+                     <VBox.margin><Insets top="16" /></VBox.margin>
+                  </Label>
+
+                  <!-- Tagline -->
+                  <Label fx:id="taglineLabel" styleClass="splash-tagline" text="Grow Smarter. Bank Better.">
+                     <VBox.margin><Insets top="4" bottom="8" /></VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+
+            <!-- Orange accent divider -->
+            <HBox alignment="CENTER">
+               <VBox.margin><Insets top="24" /></VBox.margin>
+               <children>
+                  <Region styleClass="splash-divider" />
+               </children>
+            </HBox>
+
+            <!-- Loading -->
+            <ProgressIndicator fx:id="loadingIndicator" styleClass="splash-loader">
+               <VBox.margin><Insets top="32" /></VBox.margin>
+            </ProgressIndicator>
+
+            <!-- Status message -->
+            <Label styleClass="splash-status" text="Initializing Secure Banking...">
+               <VBox.margin><Insets top="12" /></VBox.margin>
+            </Label>
+
+         </children>
+      </VBox>
+   </children>
+</StackPane>

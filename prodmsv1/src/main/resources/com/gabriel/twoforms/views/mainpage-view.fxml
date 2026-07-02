@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="311.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.MainController">
+   <children>
+      <Label layoutX="64.0" layoutY="95.0" text="Welcome to ABank" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="95.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="100.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@images/A.PNG" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_start" layoutX="101.0" layoutY="146.0" mnemonicParsing="false" onAction="#startClick" text="Click here to start" />
+   </children>
+</AnchorPane>

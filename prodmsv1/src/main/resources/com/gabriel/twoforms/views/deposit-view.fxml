@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="275.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.DepositController">
+   <children>
+      <Label layoutX="111.0" layoutY="83.0" text="Entter account number" />
+      <Label layoutX="111.0" layoutY="148.0" text="Enter amount " />
+      <TextField fx:id="accNum" layoutX="259.0" layoutY="70.0" />
+      <TextField fx:id="depAmt" layoutX="259.0" layoutY="135.0" />
+      <Button fx:id="btnSubmit" layoutX="221.0" layoutY="212.0" mnemonicParsing="false" onAction="#OnDepositSubmit" text="Submit" />
+   </children>
+</AnchorPane>

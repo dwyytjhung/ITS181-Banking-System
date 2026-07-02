@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" styleClass="mobile-scroll-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.SavingsGoalsController">
+   <content>
+      <VBox spacing="20.0" style="-fx-background-color: transparent;">
+         <padding>
+            <Insets bottom="20.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+         <children>
+            <!-- List Panel -->
+            <VBox fx:id="listPanel" spacing="15.0">
+               <children>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label text="Savings Vault" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleShowCreatePanel" styleClass="button-primary" text="+ Create New Goal" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="goalsContainerMobile" spacing="15.0">
+                     <!-- Dynamically Populated Cards -->
+                  </VBox>
+               </children>
+            </VBox>
+
+            <!-- Create Panel -->
+            <VBox fx:id="createPanel" managed="false" visible="false" spacing="15.0" styleClass="mobile-card">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleBackToList" styleClass="button-text" text="&lt; Back to Vaults" style="-fx-text-fill: #F58220; -fx-padding: 0;" />
+                  <Label text="Create Savings Goal" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" />
+                  <VBox spacing="12.0">
+                     <children>
+                        <VBox spacing="4.0">
+                           <children>
+                              <Label styleClass="text-secondary" text="Goal Name" style="-fx-font-size: 11px;" />
+                              <TextField fx:id="newGoalNameField" promptText="e.g., Vacation Fund" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="4.0">
+                           <children>
+                              <Label styleClass="text-secondary" text="Target Amount ($)" style="-fx-font-size: 11px;" />
+                              <TextField fx:id="newGoalTargetField" promptText="1000.00" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="4.0">
+                           <children>
+                              <Label styleClass="text-secondary" text="Optional Description" style="-fx-font-size: 11px;" />
+                              <TextField fx:id="newGoalDescField" promptText="e.g., Trip to Japan" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="4.0">
+                           <children>
+                              <Label styleClass="text-secondary" text="Optional Target Date (YYYY-MM-DD)" style="-fx-font-size: 11px;" />
+                              <TextField fx:id="newGoalDateField" promptText="2026-12-25" />
+                           </children>
+                        </VBox>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCreateGoal" styleClass="button-primary" text="Create Vault" />
+                        <Label fx:id="createStatusLabel" managed="false" visible="false" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+
+            <!-- Detail Panel -->
+            <VBox fx:id="detailPanel" managed="false" visible="false" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleBackToList" styleClass="button-text" text="&lt; Back to Vaults" style="-fx-text-fill: #F58220; -fx-padding: 0;" />
+                  
+                  <!-- Stat Card -->
+                  <VBox spacing="12.0" styleClass="mobile-card">
+                     <children>
+                        <Label fx:id="detailNameLabel" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="Goal Name" />
+                        <Label fx:id="detailDescLabel" styleClass="text-secondary" text="Goal Description goes here." />
+                        
+                        <VBox spacing="6.0" style="-fx-padding: 5 0 5 0;">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Target:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailTargetLabel" style="-fx-font-weight: bold;" text="\$0.00" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Saved:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailSavedLabel" style="-fx-font-weight: bold; -fx-text-fill: #22C55E;" text="\$0.00" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Remaining:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailRemainingLabel" style="-fx-font-weight: bold;" text="\$0.00" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Target Date:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailDateLabel" style="-fx-font-weight: bold;" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Status:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailStatusLabel" text="ACTIVE" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+
+                        <ProgressBar fx:id="detailProgressBar" maxWidth="1.7976931348623157E308" progress="0.0" style="-fx-pref-height: 10px;" />
+                        
+                        <HBox alignment="CENTER_LEFT" spacing="6.0">
+                           <children>
+                              <Label text="Achievement:" styleClass="text-secondary" style="-fx-font-size: 11px;" />
+                              <Label fx:id="detailBadgeLabel" text="None" style="-fx-font-weight: bold; -fx-text-fill: #F58220; -fx-font-size: 12px;" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+
+                  <!-- Management Card -->
+                  <VBox spacing="12.0" styleClass="mobile-card">
+                     <children>
+                        <Label styleClass="heading-3" text="Manage Vault Funds" />
+                        <VBox spacing="4.0">
+                           <children>
+                              <Label styleClass="text-secondary" text="Amount ($)" style="-fx-font-size: 11px;" />
+                              <TextField fx:id="amountField" promptText="0.00" />
+                           </children>
+                        </VBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDeposit" styleClass="button-primary" text="Add Money" HBox.hgrow="ALWAYS" />
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleWithdraw" styleClass="button-secondary" text="Withdraw" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        
+                        <Label text="QUICK TRANSFERS" style="-fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #64748B;" />
+                        <GridPane hgap="8.0" vgap="8.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                           </columnConstraints>
+                           <children>
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleQuickAdd100" text="+$100" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-font-size: 12px; -fx-padding: 6 12 6 12;" />
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleQuickAdd500" text="+$500" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-font-size: 12px; -fx-padding: 6 12 6 12;" />
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleQuickAdd1000" text="+$1,000" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-font-size: 12px; -fx-padding: 6 12 6 12;" />
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleQuickAdd5000" text="+$5,000" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-font-size: 12px; -fx-padding: 6 12 6 12;" />
+                           </children>
+                        </GridPane>
+                        <Label fx:id="actionStatusLabel" managed="false" visible="false" />
+                     </children>
+                  </VBox>
+
+                  <!-- History Card -->
+                  <VBox spacing="10.0" styleClass="mobile-card">
+                     <children>
+                        <Label styleClass="heading-3" text="Vault History" />
+                        <VBox fx:id="mobileTransactionsContainer" spacing="10.0">
+                           <!-- Dynamically Populated History Rows -->
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

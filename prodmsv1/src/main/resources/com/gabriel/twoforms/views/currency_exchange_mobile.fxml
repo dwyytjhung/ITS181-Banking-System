@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToWidth="true" styleClass="mobile-scroll-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.CurrencyExchangeController">
+   <content>
+      <VBox spacing="20.0" style="-fx-background-color: transparent;">
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Label styleClass="heading-2" text="Currency Exchange" style="-fx-font-size: 20px;" />
+            <VBox spacing="15.0" styleClass="mobile-card">
+               <children>
+                  <HBox spacing="10.0" alignment="CENTER">
+                     <children>
+                        <VBox spacing="6.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="text-secondary" text="From" style="-fx-font-size: 13px;" />
+                              <ComboBox fx:id="fromCurrencyCombo" maxWidth="1.7976931348623157E308" style="-fx-font-size: 13px;" />
+                           </children>
+                        </VBox>
+                        <Label text="→" style="-fx-font-size: 20px; -fx-text-fill: #F58220; -fx-padding: 18 0 0 0;" />
+                        <VBox spacing="6.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="text-secondary" text="To" style="-fx-font-size: 13px;" />
+                              <ComboBox fx:id="toCurrencyCombo" maxWidth="1.7976931348623157E308" style="-fx-font-size: 13px;" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox spacing="6.0">
+                     <children>
+                        <Label styleClass="text-secondary" text="Amount" style="-fx-font-size: 13px;" />
+                        <TextField fx:id="amountField" promptText="0.00" style="-fx-font-size: 14px; -fx-padding: 10 12;" />
+                     </children>
+                  </VBox>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleConvert" styleClass="button-primary" text="Convert">
+                     <padding><Insets bottom="12.0" top="12.0" /></padding>
+                     <VBox.margin><Insets top="5.0" /></VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox spacing="10.0" styleClass="mobile-card">
+               <children>
+                  <Label text="RESULT" style="-fx-text-fill: #64748B; -fx-font-size: 11px; -fx-font-weight: bold;" />
+                  <Label fx:id="resultLabel" text="Enter an amount to convert" wrapText="true"
+                         managed="false" visible="false" style="-fx-font-size: 14px; -fx-text-fill: #1E293B;" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="30.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.AdminDashboardController">
+   <children>
+      <Label styleClass="heading-1" text="Administrator Dashboard" />
+      <GridPane hgap="30.0" vgap="30.0">
+        <columnConstraints>
+          <javafx.scene.layout.ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+          <javafx.scene.layout.ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <javafx.scene.layout.RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+          <javafx.scene.layout.RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="CENTER_LEFT" spacing="10.0" styleClass="card">
+               <children>
+                  <Label styleClass="text-secondary" text="Total Customers" />
+                  <Label fx:id="totalCustomersLabel" styleClass="heading-1" text="0" textFill="#4f5d75" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="10.0" styleClass="card" GridPane.columnIndex="1">
+               <children>
+                  <Label styleClass="text-secondary" text="Total Bank Assets" />
+                  <Label fx:id="totalDepositsLabel" styleClass="heading-1" text="\$0.00" textFill="#22c55e" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="10.0" styleClass="card" GridPane.rowIndex="1">
+               <children>
+                  <Label styleClass="text-secondary" text="Total Transactions" />
+                  <Label fx:id="totalTransactionsLabel" styleClass="heading-1" text="0" textFill="#4f5d75" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="10.0" styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label styleClass="text-secondary" text="Pending Card Requests" />
+                  <Label fx:id="pendingRequestsLabel" styleClass="heading-1" text="0" textFill="#f58220" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

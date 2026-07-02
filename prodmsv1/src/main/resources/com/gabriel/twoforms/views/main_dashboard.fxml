@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="rootPane" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.MainDashboardController">
+
+    <!-- Top Navigation -->
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="62.0" spacing="16.0" styleClass="top-nav">
+
+            <!-- Brand: icon + wordmark in top nav -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+               <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                  <image><Image url="@../images/logo.png" /></image>
+               </ImageView>
+               <VBox alignment="CENTER_LEFT" spacing="1">
+                  <Label styleClass="top-nav-brand" text="PROSPERA" />
+                  <Label style="-fx-font-size: 10px; -fx-text-fill: #9CA3AF;" text="Digital Banking" />
+               </VBox>
+            </HBox>
+
+            <!-- spacer -->
+            <Region HBox.hgrow="ALWAYS" />
+
+            <!-- Right-side: user info + logout -->
+            <HBox alignment="CENTER_RIGHT" spacing="14.0">
+                <VBox alignment="CENTER_RIGHT" spacing="2.0">
+                    <Label fx:id="userNameLabel" styleClass="top-nav-user" text="User Name" />
+                    <Label styleClass="top-nav-role" text="Account Holder" />
+                </VBox>
+                <Button mnemonicParsing="false" onAction="#handleLogout" styleClass="button-secondary"
+                        style="-fx-font-size: 12px; -fx-padding: 7 16 7 16; -fx-background-radius: 8; -fx-border-radius: 8;"
+                        text="Sign Out" />
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- Left Sidebar -->
+    <left>
+        <VBox prefWidth="240.0" styleClass="sidebar" style="-fx-pref-height: 2000;">
+
+            <!-- ── BRAND BLOCK ── -->
+            <HBox styleClass="sidebar-brand" spacing="12" alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image><Image url="@../images/logo.png" /></image>
+                  </ImageView>
+                  <VBox spacing="2" alignment="CENTER_LEFT">
+                     <Label styleClass="sidebar-wordmark" text="PROSPERA" />
+                     <Label styleClass="sidebar-tagline" text="Grow Smarter. Bank Better." />
+                  </VBox>
+               </children>
+            </HBox>
+
+            <!-- Navigation label -->
+            <Label styleClass="sidebar-nav-label" text="NAVIGATION" />
+
+            <!-- Nav buttons (dynamically populated) -->
+            <VBox fx:id="sidebarMenu" spacing="2.0">
+                <!-- Dynamically populated -->
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Dynamic Content Area -->
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #F5F7FA;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="30.0" left="32.0" right="32.0" top="30.0" />
+            </padding>
+        </StackPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68fa59e4-d101-4592-9790-458edd71814c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/BankingApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/AdminCardRequestsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/AdminDashboardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/CurrencyExchangeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/CustomerCardCenterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/CustomerDashboardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/CustomerInboxController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/DepositWithdrawController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/LoanCalculatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/MainDashboardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/ManageAccountsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/ProfileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/SplashController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/StatementsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/TransactionsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/TransferController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/controllers/WelcomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/models/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/models/CardRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/models/Notification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/models/SavingsGoal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/models/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/services/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/services/BankingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/utils/DialogUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/utils/ViewLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gabriel/twoforms/utils/ViewModeManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/images/A.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/admin_card_requests.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/admin_card_requests_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/admin_dashboard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/admin_dashboard_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/create-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/currency_exchange.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/currency_exchange_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/customer_card_center.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/customer_card_center_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/customer_dashboard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/customer_dashboard_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/customer_inbox.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/customer_inbox_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/deposit-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/deposit_withdraw.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/deposit_withdraw_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/loan_calculator.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/loan_calculator_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/login_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/main_dashboard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/main_dashboard_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/mainpage-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/manage_accounts.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/manage_accounts_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/profile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/profile_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/show_accounts-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/splash.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/statements.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/statements_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/transaction-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/transactions.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/transactions_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/transfer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/transfer_mobile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/welcome.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gabriel/twoforms/views/welcome_mobile.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DCUEonwJOouTJ3MicmMdSzbFIc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BankingApplication.executor": "Run",
+    "Application.TwoFormsApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/dwyan/Downloads/Group9_Banking_System/bankingapp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\3T2526\JavaFXProgs\bankingapp\src\main\resources\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\3T2526\JavaFXProgs\bankingapp\src\main\resources\com\gabriel\twoforms" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="bankingapp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="bankingapp" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68fa59e4-d101-4592-9790-458edd71814c" name="Changes" comment="" />
+      <created>1777785437478</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777785437478</updated>
+      <workItem from="1777785439042" duration="890000" />
+      <workItem from="1777786340339" duration="6270000" />
+      <workItem from="1777792685310" duration="641000" />
+      <workItem from="1777793389486" duration="1665000" />
+      <workItem from="1777795198192" duration="7594000" />
+      <workItem from="1777819824838" duration="5720000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

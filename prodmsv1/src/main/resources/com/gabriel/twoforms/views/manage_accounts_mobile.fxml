@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox style="-fx-background-color: #F8FAFC;" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.controllers.ManageAccountsController">
+   <children>
+      <!-- List Panel -->
+      <VBox fx:id="listPanel" VBox.vgrow="ALWAYS">
+         <children>
+            <ScrollPane fitToWidth="true" styleClass="mobile-scroll-container" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox spacing="20.0" style="-fx-background-color: transparent;">
+                     <padding>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label styleClass="heading-2" text="Manage Accounts" style="-fx-font-size: 20px;" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleShowCreatePanel" styleClass="button-primary" text="+ Add Customer Account">
+                           <padding><Insets bottom="10.0" top="10.0" /></padding>
+                        </Button>
+                        <HBox spacing="10.0" alignment="CENTER_LEFT">
+                           <children>
+                              <TextField fx:id="searchField" promptText="Search accounts..." style="-fx-font-size: 13px; -fx-padding: 8 12;" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                           </children>
+                        </HBox>
+                        <VBox fx:id="accountsContainer" spacing="10.0">
+                           <!-- Dynamically Populated -->
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+
+      <!-- Create Account Panel -->
+      <VBox fx:id="createPanel" managed="false" visible="false" VBox.vgrow="ALWAYS">
+         <children>
+            <ScrollPane fitToWidth="true" styleClass="mobile-scroll-container" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox spacing="20.0" style="-fx-background-color: transparent;">
+                     <padding>
+                        <Insets bottom="20.0" left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleBackToList" styleClass="button-text" text="&lt; Back to Accounts" style="-fx-font-size: 13px; -fx-text-fill: #F58220; -fx-padding: 0;" />
+                        <Label styleClass="heading-3" text="Create Customer Account" style="-fx-font-size: 18px;" />
+                        <VBox spacing="15.0" styleClass="mobile-card">
+                           <children>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label styleClass="text-secondary" text="Full Name" style="-fx-font-size: 11px;" />
+                                    <TextField fx:id="newUserNameField" promptText="e.g., John Doe" style="-fx-padding: 8 10; -fx-font-size: 13px;" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label styleClass="text-secondary" text="Username / Customer ID" style="-fx-font-size: 11px;" />
+                                    <TextField fx:id="newUserIdField" promptText="e.g., john_doe" style="-fx-padding: 8 10; -fx-font-size: 13px;" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label styleClass="text-secondary" text="Password" style="-fx-font-size: 11px;" />
+                                    <TextField fx:id="newUserPassField" promptText="********" style="-fx-padding: 8 10; -fx-font-size: 13px;" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label styleClass="text-secondary" text="Initial Deposit ($)" style="-fx-font-size: 11px;" />
+                                    <TextField fx:id="initialDepositField" promptText="0.00" style="-fx-padding: 8 10; -fx-font-size: 13px;" />
+                                 </children>
+                              </VBox>
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCreateAccount" styleClass="button-primary" text="Create Account">
+                                 <padding><Insets bottom="10.0" top="10.0" /></padding>
+                              </Button>
+                              <Label fx:id="createStatusLabel" managed="false" visible="false" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      
+      <!-- Detail Panel -->
+      <VBox fx:id="detailPanel" managed="false" visible="false" VBox.vgrow="ALWAYS">
+         <children>
+            <ScrollPane fitToWidth="true" styleClass="mobile-scroll-container" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox spacing="20.0" style="-fx-background-color: transparent;">
+                     <padding>
+                        <Insets bottom="20.0" left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleBackToList" styleClass="button-text" text="&lt; Back to Accounts" style="-fx-font-size: 13px; -fx-text-fill: #F58220; -fx-padding: 0;" />
+                        <Label styleClass="heading-3" text="Account Details" style="-fx-font-size: 18px;" />
+                        <VBox spacing="12.0" styleClass="mobile-card">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Owner Name:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailNameLabel" style="-fx-font-weight: bold;" text="" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Account #:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailAccountNumLabel" style="-fx-font-weight: bold;" text="" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Current Balance:" styleClass="text-secondary" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                                    <Label fx:id="detailBalanceLabel" style="-fx-font-weight: bold; -fx-text-fill: #F58220;" text="" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        
+                        <VBox spacing="15.0" styleClass="mobile-card">
+                            <children>
+                               <Label text="Edit Customer Profile" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: #1E293B;" />
+                               <VBox spacing="5.0">
+                                  <children>
+                                     <Label styleClass="text-secondary" text="Full Name" style="-fx-font-size: 11px;" />
+                                     <TextField fx:id="editFullNameField" promptText="Customer full name" style="-fx-padding: 8 10; -fx-font-size: 13px;" />
+                                  </children>
+                               </VBox>
+                               <VBox spacing="5.0">
+                                  <children>
+                                     <Label styleClass="text-secondary" text="Username" style="-fx-font-size: 11px;" />
+                                     <TextField fx:id="editUsernameField" promptText="Customer username" style="-fx-padding: 8 10; -fx-font-size: 13px;" />
+                                  </children>
+                               </VBox>
+                               <VBox spacing="5.0">
+                                  <children>
+                                     <Label styleClass="text-secondary" text="New Password" style="-fx-font-size: 11px;" />
+                                     <TextField fx:id="editPasswordField" promptText="Leave blank to keep current" style="-fx-padding: 8 10; -fx-font-size: 13px;" />
+                                  </children>
+                               </VBox>
+                               <VBox spacing="5.0">
+                                  <children>
+                                     <Label styleClass="text-secondary" text="Update Balance ($)" style="-fx-font-size: 11px;" />
+                                     <TextField fx:id="updateBalanceField" promptText="0.00" style="-fx-padding: 8 10; -fx-font-size: 13px;" />
+                                  </children>
+                               </VBox>
+                               <HBox spacing="10.0">
+                                  <children>
+                                     <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleModifyAccount" styleClass="button-primary" text="Update" HBox.hgrow="ALWAYS" />
+                                     <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDeleteAccount" style="-fx-background-color: #EF4444;" styleClass="button-primary" text="Delete" HBox.hgrow="ALWAYS" />
+                                  </children>
+                               </HBox>
+                               <Label fx:id="actionStatusLabel" managed="false" visible="false" />
+                            </children>
+                         </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

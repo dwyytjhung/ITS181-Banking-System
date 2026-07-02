@@ -1,0 +1,61 @@
+/* ============================================================
+   SYNERGY — Splash Screen Mobile Banking Theme
+   ============================================================ */
+
+.root {
+    -fx-background-color: linear-gradient(to bottom, #fff7ed 0%, #f1f5f9 55%, #f8fafc 100%);
+    -fx-alignment: center;
+}
+
+/* ── Brand Title ── */
+#brandTitle {
+    -fx-text-fill: #ea580c;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-letter-spacing: 3px;
+    -fx-effect: dropshadow(three-pass-box, rgba(234,88,12,0.15), 8, 0, 0, 2);
+}
+
+/* ── Brand Subtitle ── */
+#brandSubtitle {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-letter-spacing: 2px;
+}
+
+/* ── Logo Card Panel ── */
+#pane {
+    -fx-background-color: white;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-border-color: #fed7aa;
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(three-pass-box, rgba(234,88,12,0.12), 20, 0, 0, 6);
+}
+
+/* ── Proceed Button — Full-width mobile pill ── */
+#btnProceed {
+    -fx-background-color: linear-gradient(to right, #ea580c, #f97316);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-radius: 50;
+    -fx-border-radius: 50;
+    -fx-padding: 13 60;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(234,88,12,0.35), 12, 0, 0, 4);
+}
+
+#btnProceed:hover {
+    -fx-background-color: linear-gradient(to right, #c2410c, #ea580c);
+    -fx-effect: dropshadow(three-pass-box, rgba(234,88,12,0.50), 18, 0, 0, 6);
+}
+
+#btnProceed:pressed {
+    -fx-background-color: #9a3412;
+    -fx-effect: none;
+}

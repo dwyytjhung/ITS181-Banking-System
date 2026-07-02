@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="300.0" prefWidth="400.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gabriel.twoforms.TransactionController">
+    <children>
+        <Label alignment="CENTER" prefHeight="288.0" prefWidth="230.0" text="Select Transaction">
+            <padding>
+                <Insets right="20.0" />
+            </padding>
+         <font>
+            <Font size="24.0" />
+         </font>
+        </Label>
+        <Button fx:id="btn_Create" alignment="CENTER" contentDisplay="CENTER" onAction="#createClick" text="Create Account" />
+        <Button fx:id="btn_Deposit" alignment="CENTER" mnemonicParsing="false" onAction="#depositClick" text="Deposit" />
+        <Button fx:id="btn_withdraw" alignment="CENTER" mnemonicParsing="false" onAction="#withdrawClick" text="Withdraw" />
+        <Button fx:id="btn_Bal" alignment="CENTER" mnemonicParsing="false" onAction="#balanceClick" text="Check Balance" />
+      <Button fx:id="view" mnemonicParsing="false" onAction="#OnView" text="View Accounts" />
+        <Button fx:id="btn_Exit" alignment="CENTER" mnemonicParsing="false" onAction="#exitClick" text="Exit" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" />
+    </padding>
+</VBox>
